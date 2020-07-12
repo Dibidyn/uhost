@@ -1,0 +1,260 @@
+/* roboto-regular - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/roboto-v20-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local('Roboto'), local('Roboto-Regular'),
+       url('../fonts/roboto-v20-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/roboto-v20-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/roboto-v20-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/roboto-v20-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/roboto-v20-latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */
+}
+/* @font-face {
+  if we have another font, then we need to specify
+  font-weight: value;
+  or browser would? download only the last font
+  font-display works with connection with @font-face
+} */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+  /* overflow-y: hidden; */
+}
+/* that's always the height our main element should have 
+(минус 3.15rem высота лого хедера + паддинги хэдэра)
+и минус высота футера 8rem (with its margin) */
+main {
+  min-height: calc(100vh - 3.15rem - 8rem);
+  margin: 3.15rem auto 0;
+}
+.backdrop {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.main-header {
+  background-color: #2ddf5c;
+  padding: 0.2rem 1rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+.main-brand {
+  display: inline-block;
+  vertical-align: middle;
+}
+/* toggle button starts ----------------------------------------*/
+.toggle-button {
+  width: 3rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding-top: 0;
+  padding-bottom: 0;
+  vertical-align: middle;
+}
+
+.toggle-button:focus {
+  outline: none;
+}
+
+.toggle-button__bar {
+  width: 100%;
+  height: 0.2rem;
+  background: black;
+  display: block;
+  margin: 0.6rem 0;
+}
+/* toggle button ends ---------------------------------------------*/
+
+.main-brand__logo {
+  display: none;
+}
+.main-brand__logo img {
+  height: 100%;
+}
+.main-nav {
+  display: none;
+}
+
+.main-nav__item {
+  display: none;
+}
+@media (min-width: 42.4rem) {
+  .main-brand__logo {
+    display: inline-block;
+    height: 2.75rem;
+    color: #0e4f1f;
+    text-decoration: none;
+    font-weight: bold;
+    vertical-align: middle;
+  }
+  .toggle-button {
+    display: none;
+  }
+  .main-nav__items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .main-nav__item {
+    display: inline-block;
+    margin: 0 1rem;
+  }
+  .main-nav {
+    display: inline-block;
+    /* right: 20px; */
+    text-align: right;
+    /* the whitespace between </div> and <nav>
+      is considered a character ! 
+      whitespace takes roughly 5px*/
+    /* width: calc(100% - 49px); 49px is the width of the .main-brand */
+    width: calc(100% - 52px);
+    vertical-align: middle;
+  }
+}
+
+/* .main-nav__item:not(:last-child) {
+    padding-right: 12px;
+  } */
+.main-nav__item a,
+.mobile-nav__item a {
+  text-decoration: none;
+  color: #0e4f1f;
+  padding: 0.2rem 0;
+  font-weight: bold;
+}
+.main-nav__item > a:hover,
+.main-nav__item > a:active {
+  color: whitesmoke;
+  border-bottom: 3px solid whitesmoke;
+}
+.main-nav__item--cta a,
+.mobile-nav__item--cta a {
+  color: white;
+  background: #ff1b68;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+.main-nav__item--cta a:hover,
+.main-nav__item--cta a:active,
+.mobile-nav__item--cta a:hover,
+.mobile-nav__item--cta a:active {
+  color: #ff1b68;
+  background: white;
+  border: none;
+}
+
+/* footer */
+.main-footer {
+  background-color: black;
+  padding: 0.2rem;
+  margin-top: 1rem;
+}
+.main-footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  vertical-align: auto;
+}
+.main-footer__link {
+  display: block;
+  margin: 1rem 0 2rem 0;
+}
+.main-footer__link > a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+.main-footer__link > a:hover,
+.main-footer__link > a:active {
+  cursor: pointer;
+  color: #ccc;
+}
+@media (min-width: 42.4rem) {
+  .main-footer__link {
+    display: inline-block;
+    margin: 0 1.1rem;
+  }
+  .main-footer {
+    background-color: black;
+    padding: 2rem;
+    margin-top: 3rem;
+  }
+}
+
+/* side navigation bar */
+.mobile-nav {
+  display: none;
+  position: fixed;
+  z-index: 101;
+  top: 0;
+  left: 0;
+  background: white;
+  width: 80%;
+  height: 100vh;
+}
+
+.mobile-nav__items {
+  width: 90%;
+  height: 100%;
+  list-style: none;
+  margin: 10% auto;
+  padding: 0;
+  text-align: center;
+}
+
+.mobile-nav__item {
+  margin: 1rem 0;
+}
+
+.mobile-nav__item a {
+  font-size: 1.5rem;
+}
+/* .mobile-nav__item--cta {
+} */
+
+/* buttons */
+.button {
+  background: #0e4f1f;
+  color: white;
+  font: inherit;
+  border: 2px solid #0e4f1f;
+  padding: 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.button:hover,
+.button:active {
+  background-color: white;
+  color: #0e4f1f;
+}
+.button:focus {
+  outline: none;
+}
+/* .button[disabled] {
+  cursor: not-allowed;
+  border: #a1a1a1;
+  color: #a1a1a1;
+  background-color: #ccc;
+
+} */
+.open {
+  display: block !important;
+}
