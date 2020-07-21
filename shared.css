@@ -46,6 +46,9 @@ main {
 }
 
 .main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: #2ddf5c;
   padding: 0.2rem 1rem;
   position: fixed;
@@ -53,10 +56,10 @@ main {
   width: 100%;
   z-index: 1;
 }
-.main-brand {
+/* .main-brand {
   display: inline-block;
   vertical-align: middle;
-}
+} */
 /* toggle button starts ----------------------------------------*/
 .toggle-button {
   width: 3rem;
@@ -123,7 +126,7 @@ main {
       is considered a character ! 
       whitespace takes roughly 5px*/
     /* width: calc(100% - 49px); 49px is the width of the .main-brand */
-    width: calc(100% - 52px);
+    /* width: calc(100% - 52px); */
     vertical-align: middle;
   }
 }
