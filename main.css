@@ -47,11 +47,10 @@
 .plan {
   background: #d5ffdc;
   text-align: center;
+  vertical-align: middle;
   padding: 1rem;
   margin: 1.5rem 0;
-  /* display: inline-block; */
   width: 100%;
-  vertical-align: middle;
 }
 .plan--highlighted {
   background-color: #19b84c;
@@ -60,30 +59,31 @@
 }
 @media (min-width: 42.4rem) {
   .plan__list {
-    width: 100%;
+    /* width: 100%;
     margin: auto;
-    text-align: center;
+    text-align: center; */
+    display: flex;
+    justify-content: space-evenly;
   }
   .plan {
-    display: inline-block;
+    /* display: inline-block;
     width: 30%;
     min-width: 13rem;
     margin: 0;
-    vertical-align: middle;
+    vertical-align: middle; */
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+  
+    margin: 0.5rem;
   }
   .plan--highlighted {
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
   }
 }
 @media (min-width: 55rem) {
-  .plan__list {
-    width: 80%;
-    margin: auto;
-    text-align: center;
-  }
   .plan {
     max-width: 25rem;
-    margin: 0.5rem;
   }
 }
 .plan__annotation {
@@ -135,14 +135,14 @@
   width: 100%;
 }
 @media (min-width: 42.4rem) {
-  .key-features__list{
+  .key-features__list {
     margin: 0;
   }
   .key-feature {
     display: inline-block;
     width: 30%;
     max-width: 25rem;
-    vertical-align: top; 
+    vertical-align: top;
   }
 }
 .key-feature__description {

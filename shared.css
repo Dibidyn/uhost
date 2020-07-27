@@ -25,7 +25,6 @@ body {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
   overflow-x: hidden;
-  /* overflow-y: hidden; */
 }
 /* that's always the height our main element should have 
 (минус 3.15rem высота лого хедера + паддинги хэдэра)
@@ -56,10 +55,6 @@ main {
   align-items: center;
   background-color: #2ddf5c;
 }
-/* .main-brand {
-  display: inline-block;
-  vertical-align: middle;
-} */
 /* toggle button starts ----------------------------------------*/
 .toggle-button {
   width: 3rem;
@@ -84,19 +79,13 @@ main {
 }
 /* toggle button ends ---------------------------------------------*/
 
-/* .main-brand__logo {
-  display: none;
-} */
 .main-brand__logo {
-  /* display: inline-block; */
-  /* vertical-align: middle; */
-  /* height: 2.75rem; */
+
   color: #0e4f1f;
   text-decoration: none;
   font-weight: bold;
 }
 .main-brand__logo img {
-  /* height: 100%; */
   height: 3rem;
   vertical-align: middle;
 }
@@ -109,18 +98,11 @@ main {
   .toggle-button {
     display: none;
   }
-  /* .main-nav { */
-    /* display: inline-block; */
-    /* vertical-align: middle; */
-    /* text-align: right; */
-
-    /* right: 20px; */
+ 
     /* the whitespace between </div> and <nav>
       is considered a character ! 
       whitespace takes roughly 5px*/
-    /* width: calc(100% - 49px); 49px is the width of the .main-brand */
-    /* width: calc(100% - 52px); */
-  /* } */
+
   .main-nav__items {
     display: flex;
     margin: 0;
@@ -128,14 +110,10 @@ main {
     list-style: none;
   }
   .main-nav__item {
-    /* display: inline-block; */
     margin: 0 1rem;
   }
 }
 
-/* .main-nav__item:not(:last-child) {
-    padding-right: 12px;
-  } */
 .main-nav__item a,
 .mobile-nav__item a {
   text-decoration: none;
@@ -171,20 +149,20 @@ main {
   margin-top: 1rem;
 }
 .main-footer__links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   list-style: none;
   padding: 0;
-  margin: 0;
-  text-align: center;
-  vertical-align: auto;
 }
 .main-footer__link {
-  display: block;
-  margin: 1rem 0 2rem 0;
+  margin: 0.5rem 0.5rem;
 }
 .main-footer__link > a {
   color: white;
   text-decoration: none;
-  padding: 0.5rem 1rem;
+  padding: 0.3rem 1rem;
 }
 .main-footer__link > a:hover,
 .main-footer__link > a:active {
@@ -192,9 +170,8 @@ main {
   color: #ccc;
 }
 @media (min-width: 42.4rem) {
-  .main-footer__link {
-    display: inline-block;
-    margin: 0 1.1rem;
+  .main-footer__links {
+    flex-direction: row;
   }
   .main-footer {
     background-color: black;
@@ -216,12 +193,6 @@ main {
 }
 
 .mobile-nav__items {
-  /* width: 90%;
-  height: 100%;
-  list-style: none;
-  margin: 10% auto;
-  padding: 0;
-  text-align: center; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -239,8 +210,6 @@ main {
 .mobile-nav__item a {
   font-size: 1.5rem;
 }
-/* .mobile-nav__item--cta {
-} */
 
 /* buttons */
 .button {
