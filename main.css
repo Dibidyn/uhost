@@ -55,29 +55,23 @@
 .plan--highlighted {
   background-color: #19b84c;
   color: white;
-  /* box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5); */
 }
 @media (min-width: 42.4rem) {
   .plan__list {
-    /* width: 100%;
-    margin: auto;
-    text-align: center; */
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
   }
   .plan {
-    /* display: inline-block;
-    width: 30%;
-    min-width: 13rem;
-    margin: 0;
-    vertical-align: middle; */
     display: flex;
     flex-flow: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
   
+    height: 28rem;
     margin: 0.5rem;
   }
   .plan--highlighted {
+    height: 30rem;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
   }
 }
@@ -137,12 +131,14 @@
 @media (min-width: 42.4rem) {
   .key-features__list {
     margin: 0;
+    display: flex;
+    justify-content: space-evenly;
   }
   .key-feature {
-    display: inline-block;
+    /* display: inline-block;
     width: 30%;
+    vertical-align: top; */
     max-width: 25rem;
-    vertical-align: top;
   }
 }
 .key-feature__description {
