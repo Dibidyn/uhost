@@ -59,7 +59,7 @@
 @media (min-width: 42.4rem) {
   .plan__list {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
   }
   .plan {
